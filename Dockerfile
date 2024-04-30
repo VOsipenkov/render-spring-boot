@@ -8,4 +8,4 @@ FROM openjdk:17-jdk-slim
 EXPOSE 8080
 COPY --from=build /build/libs/demo-0.0.1-SNAPSHOT.jar app.jar
 
-ENTRYPOINT [ "java", "-Dspring.profiles.active=my" "-jar", "app.jar"]
+ENTRYPOINT ["java", "-Dspring.profiles.active=my", "-jar", "app.jar"]
